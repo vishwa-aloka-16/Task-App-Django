@@ -1,0 +1,15 @@
+{% extends "app/base.html" %}
+{% block content %}
+    <div class = "add-task"> 
+        <form method="POST">
+            <h1>Add Task</h1>
+            {% csrf_token %}
+            <fieldset class="form-group">
+                    {{form}}
+                </fieldset>
+            <div class="form-group">
+                <button class="log-in" type="submit">+ Add Task</button>
+            </div>
+        <form>
+    </div>
+{% endblock content %}

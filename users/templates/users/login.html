@@ -1,0 +1,15 @@
+{% extends "app/base.html" %}
+{% block content %}
+    <div class = "center-form"> 
+        <form method="POST">
+            <h1>Task App Login</h1>
+            {% csrf_token %}
+            <fieldset class="form-group">
+                    {{form}}
+                </fieldset>
+            <div class="form-group">
+                <button class="log-in" type="submit">Log in</button>
+            </div>
+        <form>
+    </div>
+{% endblock content %}

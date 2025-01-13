@@ -1,0 +1,23 @@
+{% extends "app/base.html" %}
+{% block content %}
+<ul>
+    <h1>Latest Pending Tasks <a href="{% url 'app-home'%}"><button class="extend">View All</button></a></h1>
+    {% for task in tasks %}
+        {% if task.complete == False %}
+        <li class="task short" >
+            <h2>{{ task.title }}</h2>
+        </li>
+        {% else %}
+        {% endif %}
+    {% endfor %}
+    <h1>Latest Completed Tasks <a href="{% url 'app-done'%}"><button class="extend">View All</button></a></h1>
+    {% for task in tasks %}
+        {% if task.complete == True     %}
+        <li class="task short" >
+            <h2>{{ task.title }}</h2>
+        </li>
+        {% else %}
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endblock content %}

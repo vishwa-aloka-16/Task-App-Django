@@ -1,0 +1,501 @@
+@font-face {
+    font-family: DefaultFont;
+    src: url(./Readexpro.ttf);
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: DefaultFont;
+    text-decoration: none;
+}
+body{
+    display: flex;
+    flex-direction: row;
+}
+.navigation-bar{
+    width: 18vw;
+    padding: 2vh;
+    background-color: blue;
+    height: 96vh;
+    position: fixed;
+}
+.navigation-bar h1{
+    margin: 5vh 3vw;
+    color: #fff;
+    gap: 0.5vw;
+    font-size: 1.8rem;
+}
+.navigation-bar h1 a{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.navigation-bar h2{
+    font-size: 1.2rem;
+    text-align: left;
+    font-weight: 500;
+    color: #fff;
+    border-bottom: 5px solid rgba(255, 255, 255, 0.581);
+    padding-bottom: 2vh;
+}
+.navigation-bar li{
+    list-style:none;
+    margin-top: 3vh;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.navigation-bar li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation-bar li a:hover{
+    color: #ff4a75;
+    transition: .5s ease;
+}
+
+.navigation-bar span:first-child{
+    font-size: 4rem;
+    margin-top: -.8rem;
+    font-weight: 400;
+}
+.navigation-bar span:hover{
+    color: #ff4a75;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.navigation-bar li:last-child{
+    margin-top: 2vh;
+}
+
+.navigation-bar a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.content{
+    padding-top: 10vh;
+    padding-left: 5vw;
+    width: 68vw;
+    margin-left: 20vw;
+}
+.content h1{
+    padding-bottom: 5vh;
+}
+
+.content ul{
+    padding-left: 1vw;
+}
+.content input{
+    background-color: #ff4a75;
+}
+.content ul li {
+    width: 100%;
+    margin-bottom: 2vh;
+    list-style: none;
+    background-color:#f7f7ff ;
+    padding: 2%;
+    border-radius: 20px;
+    border: 2px solid #c9c9ff;
+    position: relative;
+}
+.content ul li h2{
+    font-weight: 450;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content h2 button{
+    background-color: transparent;
+    margin-left: 20px;
+    border-radius: 20px;
+    padding: 10px 12px;
+    font-size: 0.7rem;
+    border: 1px solid #000c46;
+    color: #000c46;
+}
+.content h2 button:hover{
+    background-color:#000c46 ;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: 1s ease;
+    cursor: pointer;
+}
+.content ul li .date{
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: absolute;
+    bottom: 5px;
+}
+.date span{
+    font-size: 0.9rem;
+    margin-left: 0px;
+    margin-right: 5px;
+    color: #7d0000;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.date l:first-child span{
+    color: #117300;
+}
+
+.content ul li p {
+    width:60vw;
+    padding-bottom: 5vh;
+}
+.content li {
+    list-style:circle ;
+}
+.center-form form{
+    width: 30vw;
+    margin-left: 15vw;
+    margin-top: 10vh;
+    border: none;
+    background-color: blue;
+    padding: 5vh 2vw;
+    border-radius: 20px;
+}
+.center-form form fieldset{
+    border: none;
+}
+.center-form form h1{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+.center-form fieldset div{
+    display: flex;
+    flex-direction: column;
+    margin: 2vh 0;
+}
+.center-form fieldset label{
+    color: #fff;
+    margin: 1vh 0;
+}
+.center-form fieldset input{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+.center-form form button{
+    text-align: center;
+    margin-left: 35%;
+    width:30%;
+    padding: 2%;
+    margin-top: 2vh;
+    background-color: #fff;
+    border-radius: 20px;
+    border: none;
+    border: 2px solid white;
+    font-size: 1.1rem;
+    transition: 1s ease;
+}
+.center-form form button:hover{
+    background-color: blue;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+}
+.center-form fieldset .errorlist li {
+    background-color: #ff2727;
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 2%;
+    border-radius: 10px;
+    color: #fff;
+}
+.center-form fieldset ul {
+    margin-left: 0;
+    padding: 0;
+    margin-left: -1vw;
+}
+.account{
+    margin-top: 10vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.581);
+}
+.logout{
+    list-style:none;
+    margin-top: 7vh;
+    text-decoration: none;
+    color: #fff;
+}
+.logout button{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: .9rem;
+    margin-top: -1vh;
+    cursor: pointer;
+}
+.add-task form{
+    width:100%;
+    margin-top: 0;
+    border: none;
+    background-color: #e1e1ff;
+    padding: 5vh 2vw;
+    border-radius: 20px;
+}
+fieldset{
+    border: none;
+}
+.add-task form h1{
+    text-align: left;
+    margin: 1vh 0;
+    padding: 0;
+    color: #000000;
+}
+.add-task fieldset div{
+    display: flex;
+    flex-direction: column;
+    margin: 2vh 0;
+}
+.add-task fieldset label{
+    color: #000000;
+    margin: 1vh 0;
+}
+.add-task fieldset input{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffffff;
+}
+.add-task fieldset textarea{
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 100%;
+    border: none;
+    background-color: #ffffff;
+}
+.add-task form button{
+    padding: 1% 2%;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: rgb(255, 255, 255);
+    background-color: blue;
+}
+.add-task form button:hover{
+    background-color: #fff;
+    border: 2px solid blue;
+    color: blue;
+    cursor: pointer;
+    transition: 1s ease;
+}
+.add-task fieldset div:last-child{
+    width: max-content;
+}
+.user-letter{
+    background-color: #fff;
+    border-radius: 100%;
+    font-size: 2rem;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    position: relative;
+    font-weight: 500;
+    color: #2b00ff;
+    border: 2px solid #fff;
+}
+.user-letter:hover{
+    background-color:#ff2727;
+    transition: 1s ease;
+    cursor: pointer;
+}
+.user-letter l{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.logout{
+    margin-top: 2vh ;
+}
+.task-edit #id_complete{
+    text-align: left;
+    width: max-content;
+    padding: 10px;
+    background-color: #000;
+}
+.task-edit fieldset div:first-child{
+    display:flex ;
+    flex-direction: row-reverse;
+    gap: 10px;
+    padding:10px 20px;
+    align-items: center;
+    background-color: green;
+    width: max-content;
+    border-radius:  20px;
+}
+
+.task-edit fieldset div:first-child label{
+    color: #fff;
+}
+ul h1{
+    display: flex;
+    align-items: center;
+}
+.extend{
+    background-color: #000c46;
+    font-size: 0.9rem;
+    margin-left: 30px;
+    padding: 5px 10px;
+    border: 2px solid #000c46;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.extend:hover{
+    background-color: transparent;
+    transition: .5s ease-in-out;
+    color: #000c46;
+    cursor: pointer;
+}
+.errorlist {
+    background-color: transparent;
+    width: 80%;
+}
+.errorlist li{
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    color: #ff2727;
+}
+
+
+
+
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2025-1-11 17:11:28
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+ @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+
+  .menu{display: none;}
+
+  @media only screen and (max-width: 900px) {
+    body{
+        flex-direction: column;
+    }
+    .date{
+        display: none;
+    }
+    .navigation-bar{
+        position: absolute;
+        top: -100vh;
+        left: 0;
+        transition: 0.5s linear;
+        width: 100vw;
+        z-index: 10;
+    }
+    .content{
+        margin-left: 2vw;
+        margin-top: 5vh;
+        padding-top: 5vh;
+        width: 85vw;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    h2{font-size: 1.2rem;}
+    .extend{
+        width: max-content;
+    }
+    .date span{
+       display: none;
+    }
+    .form-group{
+        width: 94%;
+    }
+    
+    input{
+        width: 100%;
+    }
+    textarea{
+        width: 100%;
+    }
+    .form-group .log-in{
+        padding:10px 20px;
+    }
+    .center-form{
+        width: 90vw;
+        margin: 1vw;
+    }
+    .center-form form{
+        width: 90vw;
+        margin: 1vw;
+        margin-left: -4vw;
+        margin-top: 10vh;
+    }
+    .center-form form .log-in{
+        width: max-content;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        padding: 1vh 5vw;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #fff;
+        align-items:center;
+        width: 90vw;
+        background-color: blue;
+    }
+    .menu img{
+        width: 25px;
+        height: 25px;
+        margin: 10x;
+        z-index: 10;
+        border-radius: 200%;
+        padding: 5px;
+    }
+    .menu #menuClose{
+        display: none;
+        z-index: 11;
+    }
+  }

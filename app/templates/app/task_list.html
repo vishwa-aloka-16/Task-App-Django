@@ -1,0 +1,20 @@
+{% extends "app/base.html" %}
+{% block content %}
+<h1>Your Pending Tasks</h1>
+<ul>
+    {% for task in tasks %}
+        <li class="task">
+            <h2>{{ task.title }} <a href="{% url 'app-edit' task.id%}"><button>Edit task</button></a></h2>
+            <p>{{ task.description }}</p>
+            <div class="date"><l>
+                Start: <span>{{ task.created|date:"d F Y" }}</span></l><l>  Deadline:<span>
+                {% if task.deadline %}
+                    {{ task.deadline|date:"d F Y" }}
+                {% else %}
+                    No deadline 
+                {% endif %} </span></l>
+            </div>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

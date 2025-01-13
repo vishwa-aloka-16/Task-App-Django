@@ -1,0 +1,21 @@
+{% extends "app/base.html" %}
+{% block content %}
+<h1>Your Completed Tasks</h1>
+<ul>
+    {% for task in tasks %}
+        <li class="task">
+            <h2>Task : ({{ task.title }}) completed successfully <div><a href="{% url 'app-edit' task.id%}"><button>Edit</button></a></div></h2>
+            
+            <div class="date">
+                <span>Start: </span> {{ task.created|date:"d F Y" }} <span>Deadline: </span>
+                {% if task.deadline %}
+                    {{ task.deadline|date:"d F Y" }}
+                {% else %}
+                    No deadline 
+                {% endif %}
+            </div>
+            <p>{{ task.description }}</p>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

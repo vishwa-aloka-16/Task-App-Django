@@ -1,0 +1,53 @@
+{% extends "app/base.html" %}
+{% block content %}
+    <div class = "center-form"> 
+        <form method="POST" style="margin-top: 0px;">
+            <h1>Register to Task App</h1>
+            {% csrf_token %}
+            <fieldset class="form-group">
+                    {{form}}
+                </fieldset>
+            <div class="form-group">
+                <button class="log-in" type="submit">Register</button>
+            </div>
+        <form>
+    </div>
+    <style>
+        .content {
+            margin-top: 0vh;
+        }
+        form{
+            margin-top: -2vh;
+        }
+        #id_username_helptext{
+            margin: 0;
+            padding: 0;
+            margin-left: 2vw;
+            margin-bottom: 1vh;
+            font-size: 0.5rem;
+            background-color: transparent;
+            color: #fff;
+            border: none;
+        }
+        .helptext ul li{
+            margin: 0;
+            padding: 0;
+            margin-left: 2vw;
+            font-size: 0.5rem;
+            background-color: transparent;
+            color: #fff;
+            border: none;
+        }
+        #id_password2_helptext{
+            margin: 0;
+            padding: 0;
+            margin-left: 2vw;
+            margin-bottom: 1vh;
+            font-size: 0.5rem;
+            background-color: transparent;
+            color: #fff;
+            border: none;
+        }
+        
+    </style>
+{% endblock content %}

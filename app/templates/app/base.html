@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'app/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'app/logo.png' %}" type="image/x-icon">
+    <title>
+        {% if title %}
+            To-Do App-{{title}}
+        {% else %}
+            To-Do App
+        {% endif %}
+    </title>
+</head>
+<body>
+    <div class="navigation-bar" id="navBar">
+        <h1><a href="{% url 'app-main'  %}"><span>+</span> <span>Task App</a></span></h1>
+        <ul>
+            {% if user.is_authenticated %}
+                <h2>My Tasks Dashboard</h2>
+                <li><a href="{% url 'app-home'  %}">My Pending Tasks</a></li>
+                <li><a href="{% url 'app-add'  %}">Add A New Task</a></li>
+                <li><a href="{% url 'app-done'  %}">View Completed Tasks</a></li>
+                <h2 class="account"><div class="user-letter"><l>{{user.username.0}}</l></div>My Account</h2>
+                <li id="profile">
+                    <a href="{% url 'app-profile'  %}">My Profile</a></li>
+                <form action="{% url 'app-logout'  %}" method="post" class=" logout">
+                    {% csrf_token %}
+                    <button type="submit" class="nav-item nav-link btn btn-link">Log Out</button>
+                </form>
+            {% else %}
+
+                <h2 class="account">Please Log-in or Register to Continue</h2>
+                <li><a href="{% url 'app-login'  %}">Login</a></li>
+                <li><a href="#">Register</a></li>
+            {% endif %}
+        </ul>
+        <div style="font-size: 0.5rem; padding-top: 10vh; color: #fff; font-style: italic; text-decoration: underline;">Task App Made By Viswha Aloka Jan 2025</div>
+    </div>
+    <div class="content text-focus-in">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+    <div class="menu">
+        Task app
+        <img src="{% static 'app/menu.png' %}" alt="menu" id="menuOpen">
+        <img src="{% static 'app/close.png' %}" alt="menu" id="menuClose">
+    </div>
+    <script src="{% static 'app/script.js'%}"></script>
+</body>
+</html>
